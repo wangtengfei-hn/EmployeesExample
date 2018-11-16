@@ -65,6 +65,8 @@ namespace ConsoleApp1
                 "PaymentPaidOrder",
                 _ =>
                 {
+                    if (_.Type != Example.IBusiness.Model.PaymentType.Order)
+                        return true;
                     var orderBusiness = new OrderBusiness();
                     orderBusiness.dbContext = new MSSQLDbContext("MSDbConnection");
                     return orderBusiness.Notify(_.Identity_Id, _.PaymentId);
@@ -76,6 +78,8 @@ namespace ConsoleApp1
                 "PaymentPaidRecharge",
                 _ =>
                 {
+                    if (_.Type != Example.IBusiness.Model.PaymentType.Recharge)
+                        return true;
                     //var rechargeBusiness = new RechargeBusiness();
                     //rechargeBusiness.dbContext = new MSSQLDbContext("MSDbConnection");
                     return true;
