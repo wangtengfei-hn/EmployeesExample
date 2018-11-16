@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Example.IBusiness.Model
 {
-    public class OrderModel
+    public class OrderModel : Model
     {
         /// <summary>
         /// 订单总额

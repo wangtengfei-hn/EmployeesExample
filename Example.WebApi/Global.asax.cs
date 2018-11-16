@@ -38,6 +38,7 @@ namespace Example.WebApi
             builder.Register<AppSettings>(_ => appSettings).SingleInstance();
             builder.Register<Common.RabbitMQ.RabbitMQService>(_ => new Common.RabbitMQ.RabbitMQService(appSettings.RabbitMQ.HostName, appSettings.RabbitMQ.Port, appSettings.RabbitMQ.UserName, appSettings.RabbitMQ.Password)).SingleInstance();
             builder.Register<Example.Redis.Repository.RedisContext>(_ => new Example.Redis.Repository.RedisContext(appSettings.Redis.Server, appSettings.Redis.Port, appSettings.Redis.Password)).SingleInstance();
+            //builder.Register<Example.MongoDB.Repository.MongoContext>(_ => new Example.MongoDB.Repository.MongoContext(appSettings.MongoDB.ConnectionString, appSettings.MongoDB.DatabaseName)).InstancePerLifetimeScope();
             builder.Register<Example.MSSQL.Repository.IMSSQLDbContext>(_ => new Example.MSSQL.Repository.MSSQLDbContext("MSDbConnection")).As<Example.MSSQL.Repository.IMSSQLDbContext>().PropertiesAutowired().InstancePerLifetimeScope();
             //builder.Register<Example.MySQL.Repository.IMySQLDbContext>(_ => new Example.MySQL.Repository.MySQLDbContext("MYDbConnection")).As<Example.MySQL.Repository.IMySQLDbContext>().PropertiesAutowired().InstancePerLifetimeScope();
 
@@ -47,6 +48,9 @@ namespace Example.WebApi
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container); //WebApi
             //DependencyResolver.SetResolver(new AutofacDependencyResolver(container)); //MVC
+
+            //MongoDB.Repository.MongoContext.SetMappings();
+            //MongoDB.Repository.MongoContextSeed.SeedAsync(container.Resolve<Example.MongoDB.Repository.MongoContext>()).Wait();
 
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }

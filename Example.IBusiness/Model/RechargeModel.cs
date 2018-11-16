@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Example.IBusiness.Model
 {
-    public class RechargeModel
+    public class RechargeModel : Model
     {
         /// <summary>
         /// 充值金额

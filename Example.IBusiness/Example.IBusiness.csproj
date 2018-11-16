@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdvertisementBusiness.cs" />
     <Compile Include="Events\PaymentPaidEvent.cs" />
     <Compile Include="Events\RegisterMemberEvent.cs" />
     <Compile Include="IAccountBusiness.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Model\AccountModel.cs" />
     <Compile Include="Model\AccountRecordModel.cs" />
     <Compile Include="Model\AccountRecordType.cs" />
+    <Compile Include="Model\AdvertisementModel.cs" />
     <Compile Include="Model\MemberModel.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\OrderModel.cs" />
@@ -64,6 +66,12 @@
     <Compile Include="Model\ResultModel.cs" />
     <Compile Include="Model\ThirdpayModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{308CF55A-23E6-4753-91E0-FD7CE845BF90}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@ namespace Common.Settings
         public string ThisHostUrlBase { get; set; }
         public RedisSetting Redis { get; set; }
         public RabbitMQSetting RabbitMQ { get; set; }
+        public MongoSetting MongoDB { get; set; }
         public SMSSetting SMS { get; set; }
     }
 }

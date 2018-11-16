@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Example.IBusiness.Model
 {
-    public class PaymentModel
+    public class PaymentModel : Model
     {
         /// <summary>
         /// 标识 

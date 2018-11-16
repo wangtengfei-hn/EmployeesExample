@@ -134,6 +134,7 @@
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\VerificationCodeController.cs" />
+    <Compile Include="Controllers\AdvertisementController.cs" />
     <Compile Include="Controllers\_Controller.cs" />
     <Compile Include="ExtendMethods\ExtendMethods.cs" />
     <Compile Include="Global.asax.cs">
@@ -184,6 +185,10 @@
     <ProjectReference Include="..\Example.IBusiness\Example.IBusiness.csproj">
       <Project>{7af31754-ca12-43de-9ed0-a1431c0443e8}</Project>
       <Name>Example.IBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Example.MongoDB.Repository\Example.MongoDB.Repository.csproj">
+      <Project>{75da322e-a76f-490d-b32a-ae4ddcb9be76}</Project>
+      <Name>Example.MongoDB.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\Example.MSSQL.Repository\Example.MSSQL.Repository.csproj">
       <Project>{8d4ef9d8-5ffb-4b2b-a32b-4c325176acc8}</Project>

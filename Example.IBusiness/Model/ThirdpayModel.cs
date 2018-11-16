@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Example.IBusiness.Model
 {
-    public class ThirdpayModel
+    public class ThirdpayModel : Model
     {
         /// <summary>
         /// true:退款，false:付款

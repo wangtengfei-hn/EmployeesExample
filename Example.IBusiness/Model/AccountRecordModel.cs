@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Example.IBusiness.Model
 {
-    public class AccountRecordModel
+    public class AccountRecordModel : Model
     {
         /// <summary>
         /// 类型 
